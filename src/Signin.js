@@ -6,14 +6,14 @@ export const Signin = () => {
 
   return (
     <div className="panel-landing" id="section-1">
-      <h1 className="landing-heading">Hello, Blockstack!</h1>
+      <h1 className="landing-heading">Thank you for choosing D-Vault!</h1>
       <p className="lead">
         <button
           className="btn btn-primary btn-lg"
           id="signin-button"
           onClick={() => doOpenAuth()}
         >
-          Sign In with Blockstack
+          Sign In
         </button>
       </p>
     </div>

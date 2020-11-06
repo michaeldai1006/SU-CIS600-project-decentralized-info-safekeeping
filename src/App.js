@@ -15,7 +15,7 @@ export default class App extends Component {
     userData: null,
   }
 
-  handleSignOut(e) {
+  handleSignOut = (e) => {
     e.preventDefault();
     this.setState({ userData: null });
     userSession.signUserOut(window.location.origin);
@@ -25,7 +25,7 @@ export default class App extends Component {
     const { userData } = this.state;
     const authOptions = {
       appDetails: {
-        name: 'Blockstack App',
+        name: 'D-Vault',
         icon: window.location.origin + '/favicon.ico'
       },
       userSession,

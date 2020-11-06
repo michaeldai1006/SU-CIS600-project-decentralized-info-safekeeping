@@ -1,6 +1,6 @@
 {
-  "name": "Hello, Blockstack",
-  "description": "A simple demo of Blockstack Auth",
+  "name": "D-Vault",
+  "description": "A decentralized personal information safekeeping application",
   "icons": [
     {
     "src": "favicon.ico",
