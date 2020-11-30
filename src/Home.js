@@ -46,7 +46,7 @@ export const Home = ({userData, handleSignOut}) => {
             <text
             id="status"
             >
-                Stand by
+                Standby
             </text>
             <br/>
             <textarea
