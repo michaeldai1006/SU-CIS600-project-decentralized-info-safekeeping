@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Profile from './Profile.js';
 import Home from './Home.js';
 import Signin from './Signin.js';
 import {
@@ -38,7 +37,6 @@ export default class App extends Component {
       <Connect authOptions={authOptions}>
         <div className="site-wrapper">
           <div className="site-wrapper-inner">
-            {/* { !userData ? <Signin /> : <Profile userData={userData} handleSignOut={ this.handleSignOut } /> } */}
             { !userData ? <Signin /> : <Home userData={userData} handleSignOut={ this.handleSignOut } /> }
           </div>
         </div>
