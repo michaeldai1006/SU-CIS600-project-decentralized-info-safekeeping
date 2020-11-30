@@ -1,24 +1,23 @@
 import { Storage } from '@stacks/storage';
 
-export const saveInfo = async (userSession, info_list) => {
+export const save = async (userSession, info) => {
     // New storage instance
     const storage = new Storage({ userSession });
 
     // Put file
-    await storage.putFile("D-Vault-Info", JSON.stringify(info_list), 
-    { encrypt: true, dangerouslyIgnoreEtag: true});
+    await userSession.putFile("D-Vault-Info", info, 
+    { encrypt: false, dangerouslyIgnoreEtag: true});
 };
 
-export const fetchInfo = async (userSession, username) => {
+export const fetch = async (userSession, username) => {
     // New storage instance
     const storage = new Storage({ userSession });
 
     // Get file
-    const raw_info_list = await storage.getFile("D-Vault-Info", {
-        decrypt: true,
+    const info = await userSession.getFile("D-Vault-Info", {
+        decrypt: false,
         username: username,
     });
 
-    // Parse response
-    return JSON.parse(raw_info_list);
+    return info
 }
