@@ -2,15 +2,10 @@ import React, { Component } from 'react';
 import { authenticate, useConnect } from '@blockstack/connect';
 
 export const Signin = () => {
-  const { doOpenAuth } = useConnect();
+  const { doOpenAuth, doAuth } = useConnect();
   const signInAuthOptions = {
     sendToSignIn: true,
-    // your other AuthOptions
-  };
-
-  const signUpAuthOptions = {
-    sendToSignIn: false,
-    // your other AuthOptions
+    redirectTo: "/"
   };
 
   return (
@@ -20,13 +15,13 @@ export const Signin = () => {
         <button
           className="btn btn-primary btn-lg"
           id="signin-button"
-          onClick={() => authenticate(signUpAuthOptions)}
+          onClick={() => doOpenAuth()}
         >
           Sign In
         </button>
         <br/>
         <a
-          onClick={() => doOpenAuth()} type="button"
+          onClick={() => doAuth()} type="button"
         >
           Sign Up
         </a>
