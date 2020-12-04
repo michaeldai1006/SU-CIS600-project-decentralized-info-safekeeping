@@ -24,12 +24,7 @@ App home page when App first launched:
   <img src="./README/Images/1.png" width="70%" height="70%" />
 </p>
 
-Click on "Sign in" button to initiate authentication process:
-<p align="center">
-  <img src="./README/Images/2.png" width="70%" height="70%" />
-</p>
-
-Create a Blockstack account by click on the "Get your Secret Key" button. (To sign in with a existing Blockstack account, click on the "Sign in" button at lower left) You will be redirected to the Blockstack authentication portal, your Secret Key will be presented:
+Click on "Sign Up" button to initiate authentication process (To sign in with a existing Blockstack account, click on the "Sign in" button), your Secret Key will be presented:
 <p align="center">
   <img src="./README/Images/3.png" width="70%" height="70%" />
 </p>
