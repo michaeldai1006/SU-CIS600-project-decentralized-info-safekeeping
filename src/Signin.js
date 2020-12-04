@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
-import { useConnect } from '@blockstack/connect';
+import { authenticate, useConnect } from '@blockstack/connect';
 
 export const Signin = () => {
   const { doOpenAuth } = useConnect();
+  const signInAuthOptions = {
+    sendToSignIn: true,
+    // your other AuthOptions
+  };
+
+  const signUpAuthOptions = {
+    sendToSignIn: false,
+    // your other AuthOptions
+  };
 
   return (
     <div className="panel-landing" id="section-1">
@@ -11,10 +20,16 @@ export const Signin = () => {
         <button
           className="btn btn-primary btn-lg"
           id="signin-button"
-          onClick={() => doOpenAuth()}
+          onClick={() => authenticate(signUpAuthOptions)}
         >
           Sign In
         </button>
+        <br/>
+        <a
+          onClick={() => doOpenAuth()} type="button"
+        >
+          Sign Up
+        </a>
       </p>
     </div>
   );
